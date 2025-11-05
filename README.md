@@ -1,43 +1,40 @@
 # 🏆 Sports Celebrity Image Classification
 
 ## 📖 Project Overview
-The **Sports Celebrity Image Classification** project aims to identify famous sports personalities using **Machine Learning** and **Image Processing** techniques.  
-This model can recognize multiple athletes based on their facial features using **OpenCV** for image detection and an **SVM (Support Vector Machine)** classifier for prediction.
-
----
+The Sports Celebrity Image Classification project identifies famous sports personalities using Machine Learning and Image Processing techniques. It detects faces using OpenCV, extracts features using wavelet transforms, and classifies using an SVM model.
 
 ## ✨ Features
-- Detects and classifies sports celebrities accurately.  
-- Uses **Haar Cascade** for face detection.  
-- Processes and extracts features from images using **Wavelet Transforms**.  
-- Classifies using **SVM (Support Vector Machine)**.  
-- Supports multiple celebrity categories (e.g., Virat Kohli, Serena Williams, Roger Federer, etc.).  
-
----
+- Face detection with Haar Cascade
+- Wavelet-based feature extraction
+- Classification using SVM
+- Support for multiple celebrities (Virat Kohli, Serena Williams, Roger Federer, Maria Sharapova, Lionel Messi,...)
 
 ## 🧰 Tech Stack
-| Component | Description |
-|------------|-------------|
-| **Language** | Python |
-| **Libraries** | OpenCV, NumPy, joblib, Scikit-learn |
-| **Algorithm** | Support Vector Machine (SVM) |
-| **Face Detection** | Haar Cascade Classifier |
-| **IDE Used** | Jupyter Notebook / VS Code |
-| **Data Source** | Public sports celebrity dataset from GitHub |
-
----
+- **Language:** Python  
+- **Libraries:** OpenCV, NumPy, scikit-learn, joblib, PyWavelets  
+- **Face Detection:** Haar Cascade  
+- **Model:** Support Vector Machine (SVM)
 
 ## 🧠 Model Workflow
-1. **Data Collection** – Images of sports celebrities collected from GitHub dataset.  
-2. **Preprocessing** – Cropping faces using **Haar Cascade Classifier**.  
-3. **Feature Extraction** – Using **Wavelet Transform** to capture texture and frequency-based features.  
-4. **Model Training** – Training an **SVM classifier** using the extracted features.  
-5. **Evaluation** – Testing model performance and accuracy.  
-6. **Prediction** – Given an input image, the model predicts the sports celebrity.
+1. Data collection (public datasets)  
+2. Preprocessing: face detection & cropping (Haar cascade)  
+3. Feature extraction: wavelet transforms + raw pixel features  
+4. Model training: SVM on extracted features  
+5. Evaluation and prediction
 
----
+## ⚙️ How to run
 
-## ⚙️ How to Run the Project
-1. Clone this repository:
-   ```bash
-   git clone https://github.com/ThumuTejaswi/Sports_Celebrity_Image_Classification.git
+bash
+# clone
+git clone https://github.com/ThumuTejaswi/Sports_Celebrity_Image_Classification.git
+cd Sports_Celebrity_Image_Classification
+
+# install
+pip install -r requirements.txt
+
+# run server (if exists)
+python server/app.py
+
+# or run prediction script
+python predict.py --image samples/test.jpg
+
